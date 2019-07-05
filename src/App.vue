@@ -1,17 +1,33 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld :msg="msg"/>
   </div>
+
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+// import axios from 'axios'
 
 export default {
   name: 'app',
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  async created() {
+    // const result = await axios({
+    //   method:'get',
+    //   url:'http://localhost:7001/',
+    // })
+    const result = await this.$jsonp('http://localhost:7001/')
+    window.console.log(result)
+    this.msg = result
   }
 }
 </script>
