@@ -11,7 +11,8 @@
     "axios": "^0.19.0",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "vue-jsonp": "^0.1.8"
+    "vue-jsonp": "^0.1.8",
+    "vuetify": "^1.5.16"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
