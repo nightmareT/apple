@@ -1,13 +1,17 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h3>Essential Links</h3>
+    <div class="title">
+      <div>11</div>
+      <div>22</div>
+    </div>
+    <div>{{ msg }}</div>
     <v-alert
         :value="true"
         type="success"
       >
         This is a success alert.
       </v-alert>
+      <div>this is a new shit</div>
   </div>
 </template>
 
@@ -20,20 +24,23 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style lang="less" scoped>
+ .hello {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   .title {
+     display: flex;
+     justify-content: space-between;
+     div {
+       &:nth-child(1) {
+         margin-left: 30px;
+       }
+       &:nth-child(2) {
+         margin-right: 30px;
+       }
+     }
+   }
+ }
 </style>

@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld :msg="msg"/>
   </div>
 
@@ -38,7 +37,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: url('./assets/vietnam.jpg') no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  width: 100%;
+  height: inherit;
 }
 </style>
