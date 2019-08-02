@@ -36,7 +36,7 @@ export default {
   },
   data() {
     return {
-      valid: {},
+      valid: true,
       userName: ''
     }
   },
@@ -44,12 +44,13 @@ export default {
     async toggleMarker() {
       // const result = await axios.post('http://localhost:7001/userNameAuth')
       const params = new URLSearchParams()
-      params.append('event_id', '123');
+      params.append('userName', this.userName);
       const result = await axios({
         method: 'post',
-        url: 'http://localhost:7001/userNameAuth',
-        data: params
-      });
+        url: 'http://127.0.0.1:7001/userNameAuth',
+        data: params,
+        withCredentials: true
+      })
       window.console.log(result)
     }
   }
