@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <login :msg="msg"/>
+    <router-view id='11'>
+    </router-view>
   </div>
-
 </template>
 
 <script>
-import login from './components/login.vue'
+// import login from './components/login.vue'
 // import axios from 'axios'
 
 export default {
   name: 'app',
-  components: {
-    login
-  },
+  // components: {
+  //   login
+  // },
   data() {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -24,14 +24,14 @@ export default {
     //   method:'get',
     //   url:'http://localhost:7001/',
     // })
-    const result = await this.$jsonp('http://127.0.0.1:7001/')
-    // const result = await axios({
-    //     method: 'get',
-    //     url: 'http://127.0.0.1:7001/',
-    //     withCredentials: true
-    //   })
-    window.console.log(result)
-    this.msg = result
+    // const result = await this.$jsonp('http://127.0.0.1:7001/')
+    // // const result = await axios({
+    // //     method: 'get',
+    // //     url: 'http://127.0.0.1:7001/',
+    // //     withCredentials: true
+    // //   })
+    // window.console.log(result)
+    // this.msg = result
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="hello" id='11'>
+  <div class="hello">
     <div class="title">
       <div>Amer</div>
       <div>wonderLand</div>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 
 export default {
   name: "HelloWorld",
@@ -41,20 +41,17 @@ export default {
     }
   },
   methods: {
-    // async toggleMarker() {
-    //   // const result = await axios.post('http://localhost:7001/userNameAuth')
-    //   const params = new URLSearchParams()
-    //   params.append('userName', this.userName);
-    //   const result = await axios({
-    //     method: 'post',
-    //     url: 'http://127.0.0.1:7001/userNameAuth',
-    //     data: params,
-    //     withCredentials: true
-    //   })
-    //   window.console.log(result)
-    // }
     async toggleMarker() {
-      this.$router.push('/user:123')
+      // const result = await axios.post('http://localhost:7001/userNameAuth')
+      const params = new URLSearchParams()
+      params.append('userName', this.userName);
+      const result = await axios({
+        method: 'post',
+        url: 'http://127.0.0.1:7001/userNameAuth',
+        data: params,
+        withCredentials: true
+      })
+      window.console.log(result)
     }
   }
 };
